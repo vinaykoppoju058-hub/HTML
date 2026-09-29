@@ -191,7 +191,7 @@ input {
 
 .collection-word {
   position: absolute;
-  top: 160px;
+  top: 120px;
   left: 16%;
   font-size: clamp(80px, 10vw, 140px);
   color: transparent;
