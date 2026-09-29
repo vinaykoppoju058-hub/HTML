@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVAVA Motors</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <a href="#" class="logo">AVAVA <span>Motors</span></a>
+
+    <nav class="nav">
+      <a class="active" href="#home">HOME</a>
+      <a href="#listings">LISTINGS⌄</a>
+      <a href="#pages">PAGES⌄</a>
+      <a href="#blog">BLOG⌄</a>
+      <a href="#shop">SHOP⌄</a>
+      <a href="#explore">EXPLORE⌄</a>
+      <a href="#search">⌕</a>
+      <a href="#profile">♙</a>
+    </nav>
+
+    <a href="#listings" class="add-btn">+ Add Listing <b>→</b></a>
+  </header>
+
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero section-box" id="home">
+      <div class="hero-top">
+        <div>
+          <h1>CABRIOLET GT 535</h1>
+          <p class="hero-sub"><i>Winner, AVAVA Motors Show</i> · <i>2027</i></p>
+          <span class="stock"><em></em> 245 VEHICLES AVAILABLE</span>
+        </div>
+
+        <div class="price">
+          <strong>$148,900</strong>
+          <small>or <b>$1,690</b> / month</small>
+        </div>
+      </div>
+
+      <div class="collection-word ">THE COLLECTION</div>
+
+      <div class="hero-car">
+        <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cabriolet-hero.webp" alt="Main vehicle">
+      </div>
+
+      <div class="side-social">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+
+      <div class="side-tools">
+         <a href="#" id="engineKey"><i class="fa-notdog fa-solid fa-key"></i></a>
+         <a href="#" class="orange"><i class="fa-solid fa-moon"></i></a>
+        <a href="#"><i class="fa-regular fa-circle-dot"></i></a>
+        <a href="#">360°</a>
+      </div>
+
+
+<!-- ENGINE SOUND -->
+<audio id="engineSound">
+    <source src="engine.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- JAVASCRIPT -->
+<script>
+
+    const engineKey = document.getElementById("engineKey");
+    const engineSound = document.getElementById("engineSound");
+
+    engineKey.addEventListener("click", function(event) {
+
+        event.preventDefault();
+
+        // Sound starting from beginning
+        engineSound.currentTime = 0;
+
+        // Play engine sound
+        engineSound.play();
+
+        // Key animation
+        engineKey.classList.add("engine-started");
+
+        // Remove animation
+        setTimeout(function() {
+            engineKey.classList.remove("engine-started");
+        }, 5000);
+
+    });
+
+</script>
+      <!-- vehicle selector -->
+      <div class="vehicle-selector">
+        <div class="selector-heading">
+          <div>
+            <h3>Select Vehicle</h3>
+            <p>Choose a body style — from cabriolets and coupés to SUVs, pickups and luxury sedans</p>
+          </div>
+          <a href="#">All body styles →</a>
+        </div>
+
+        <div class="vehicle-grid">
+          <article class="vehicle-card selected">
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/dark_style/cabriolet.webp" alt="Cabriolet">
+            <h4>Cabriolet</h4>
+            <small>24 available</small>
+          </article>
+
+          <article class="vehicle-card">
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/dark_style/coupe.webp" alt="Coupe">
+            <h4>Coupé</h4>
+            <small>31 available</small>
+          </article>
+
+          <article class="vehicle-card">
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/dark_style/sport-suv.webp" alt="Sport SUV">
+            <h4>Sport SUV</h4>
+            <small>42 available</small>
+          </article>
+
+          <article class="vehicle-card">
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/dark_style/pickup.webp" alt="Pickup">
+            <h4>Pickup</h4>
+            <small>18 available</small>
+          </article>
+
+          <article class="vehicle-card">
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/dark_style/sedan.webp" alt="Sedan">
+            <h4>Sedan</h4>
+            <small>27 available</small>
+          </article>
+
+          <article class="vehicle-card">
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/dark_style/grand-tourer.webp" alt="Grand Tourer">
+            <h4>Grand Tourer</h4>
+            <small>12 available</small>
+          </article>
+
+          <article class="vehicle-card">
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/dark_style/electric.webp" alt="Electric">
+            <h4>Electric</h4>
+            <small>36 available</small>
+          </article>
+        </div>
+      </div>
+
+      <a class="floating-btn" href="#featured">Configure Your Car <b>→</b></a>
+    </section>
+
+
+    <!-- ================= WHY AVAVA ================= -->
+    <section class="why section">
+      <div class="section-label"><span></span> WHY AVAVA</div>
+      <h2>Built around the driver</h2>
+      <p class="section-intro">Four commitments that make buying with AVAVA different from any other dealership.</p>
+
+      <div class="commitments">
+        <article class="commit-card">
+          <div class="icon orange-icon">
+    <span class="wide-rhombus"></span></div>
+          <h3>Curated collection</h3>
+          <p>Only the top 3% of vehicles we inspect ever reach our showroom floor — no filler, no compromises.</p>
+        </article>
+
+        <article class="commit-card light">
+          <div class="icon diamond"><i class="fa-duotone fa-solid fa-tag"></i></div>
+          <h3>Transparent pricing</h3>
+          <p>One honest price with the full service history and finance terms shown up front. What you see is what you pay.</p>
+        </article>
+        
+
+        <article class="commit-card">
+          <div class="icon">↓</div>
+          <h3>White-glove delivery</h3>
+          <p>Delivered to your door across 7 locations — detailed, and fully fuelled or charged on arrival.</p>
+        </article>
+
+        <article class="commit-card">
+          <div class="icon check"><i class="fa-sharp fa-solid fa-check"></i></div>
+          <h3>Certified inspection</h3>
+          <p>Every car passes a documented 200-point check, backed by a 12-month warranty.</p>
+        </article>
+      </div>
+
+      <div class="stats">
+        <div><strong>142</strong><span>Vehicles in stock</span></div>
+        <div><strong>7</strong><span>Showrooms</span></div>
+        <div><strong>4.9<span>/5</span></strong><span>2,400+ reviews</span></div>
+        <div><strong>15</strong><span>Years of trust</span></div>
+      </div>
+    </section>
+
+
+    <!-- ================= FEATURED ================= -->
+    <section class="featured section" id="listings">
+      <div class="featured-head">
+        <div>
+          <h2>Featured Listings</h2>
+          <p>Hand-picked vehicles from our showroom floor — configured,<br>inspected and ready to drive. Reserve online in minutes.</p>
+        </div>
+        <div class="featured-right">
+          <a class="cream-btn" href="#">View All Vehicles <b>→</b></a>
+          <div class="mini-stats"><strong>142</strong><span>In stock</span><strong>7</strong><span>Locations</span></div>
+        </div>
+      </div>
+
+      <div class="listing-grid">
+        <article class="listing-main">
+          <span class="tag orange-tag">Featured</span>
+          <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/featured/bmw-m4-competition-card-16x9.webp" alt="Porsche 911 Carrera GTS">
+          <div class="listing-info">
+            <small>Porsche · Coupe · 2027</small>
+            <h3>911 Carrera GTS</h3>
+            <strong>$164,900</strong>
+          </div>
+        </article>
+
+        <div class="small-listings">
+          <article class="listing-card">
+            <span class="tag">Coupe</span>
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/featured/mercedes-amg-gt-63-card-16x9.webp" alt="AMG GT 63">
+            <div><h3>AMG GT 63</h3><p>Mercedes-AMG · $178,000</p></div>
+          </article>
+
+          <article class="listing-card">
+            <span class="tag orange-tag">Electric</span>
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/featured/audi-rs-e-tron-gt-card-16x9.webp" alt="RS e-tron GT">
+            <div><h3>RS e-tron GT</h3><p>Audi · $147,000</p></div>
+          </article>
+
+          <article class="listing-card">
+            <span class="tag">Luxury</span>
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/featured/bentley-continental-gt-card-16x9.webp" alt="Continental GT">
+            <div><h3>Continental GT</h3><p>Bentley · $265,000</p></div>
+          </article>
+
+          <article class="listing-card">
+            <span class="tag">SUV</span>
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/featured/range-rover-sport-card-16x9.webp" alt="Range Rover Sport">
+            <div><h3>Range Rover Sport</h3><p>Land Rover · $96,400</p></div>
+          </article>
+
+          <article class="listing-card">
+            <span class="tag">Coupe</span>
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/porsche-feature.webp" alt="911 Carrera GTS">
+            <div><h3>911 Carrera GTS</h3><p>Porsche · $164,900</p></div>
+          </article>
+
+          <article class="listing-card">
+            <span class="tag">Coupe</span>
+            <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cars/featured/bmw-m4-competition-card-16x9.webp" alt="M4 Competition">
+            <div><h3>M4 Competition</h3><p>BMW · $92,300</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= BUYING ================= -->
+    <section class="buying section" id="pages">
+      <div class="section-title-row">
+        <h2>Buying, simplified</h2>
+        <a class="cream-btn" href="#listings">Start browsing <b>→</b></a>
+      </div>
+
+      <div class="steps">
+        <article class="step active">
+          <span class="step-no">1</span><div class="step-icon">⌕</div>
+          <div><h3>Browse & compare</h3><p>Filter 142 inspected vehicles by body, brand and budget.</p></div>
+        </article>
+
+        <article class="step">
+          <span class="step-no">2</span><div class="step-icon">✓</div>
+          <div><h3>Reserve online</h3><p>Lock your car with a refundable deposit in minutes.</p></div>
+        </article>
+
+        <article class="step">
+          <span class="step-no">3</span><div class="step-icon">☰</div>
+          <div><h3>Inspect & finance</h3><p>Review the 200-point report and tailor your finance.</p></div>
+        </article>
+
+        <article class="step">
+          <span class="step-no">4</span><div class="step-icon">⌁</div>
+          <div><h3>White-glove delivery</h3><p>We bring it to your door, detailed and ready to drive.</p></div>
+        </article>
+      </div>
+
+      <div class="finance-box">
+        <div class="finance-heading">
+          <div>
+            <div class="section-label"><span></span> FINANCE CALCULATOR</div>
+            <h2>Own it from</h2>
+          </div>
+          <div class="monthly"><strong>$3,402</strong><span>/mo</span><small>4.9% APR · 48 months · $148,000 financed</small></div>
+        </div>
+
+        <div class="finance-controls">
+          <div class="range-control"><label>Vehicle price <b>$178,000</b></label><input type="range" min="40000" max="300000" value="178000"><small>$40k <span>$300k</span></small></div>
+          <div class="range-control"><label>Down payment <b>$30,000</b></label><input type="range" min="0" max="100000" value="30000"><small>$0 <span>$100k</span></small></div>
+          <div class="range-control"><label>Term <b>48 mo</b></label><input type="range" min="24" max="84" value="48"><small>24 <span>84</span></small></div>
+          <div class="range-control"><label>APR <b>4.9%</b></label><input type="range" min="2" max="12" value="4.9" step="0.1"><small>2% <span>12%</span></small></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= TRADE IN ================= -->
+    <section class="trade section" id="shop">
+      <div class="section-label"><span></span> TRADE-IN · INSTANT OFFER</div>
+      <h2>Your car is worth more than you think</h2>
+
+      <div class="trade-grid">
+        <div class="trade-car">
+          <div class="offer">
+            <small>Estimated offer range</small>
+            <strong>$46,941 – $54,007</strong>
+            <p>2021 Porsche 911 Carrera · 32,000 mi</p>
+          </div>
+          <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cabriolet-hero.webp" alt="Trade-in vehicle">
+          <a class="cream-btn accept" href="#">Accept offer <b>→</b></a>
+        </div>
+
+        <div class="trade-form">
+          <div class="form-grid">
+            <label>Make<input value="Porsche" type="text"></label>
+            <label>Model<input value="911 Carrera" type="text"></label>
+            <label>Year<input value="2021" type="text"></label>
+            <label>Mileage<input value="32,000 mi" type="text"></label>
+          </div>
+
+          <div class="condition">
+            <div class="circle">3/4<small>Condition</small></div>
+            <div><strong>Great condition</strong><div class="condition-line"></div><small>Fair　　　　　　　　 Good　　　　　　　　 Great　　　　　　　　 Excel.</small></div>
+          </div>
+
+          <div class="drivers">
+            <small>Value drivers</small>
+            <p>Model demand <b>High</b></p><div class="bar"><i style="width:94%"></i></div>
+            <p>Mileage <b>Average</b></p><div class="bar"><i style="width:70%"></i></div>
+            <p>Condition <b>Great</b></p><div class="bar"><i style="width:76%"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="testimonials section" id="blog">
+      <div class="section-label"><span></span> TESTIMONIALS</div>
+      <h2>Rated 4.9 by real owners</h2>
+      <div class="stars">★★★★★</div>
+      <p class="review-count">2,431 verified reviews</p>
+     <div class="reviews" >
+        <article><div class="stars">★★★★★</div><p>“Trade-in beat every other offer I got
+             Finance took ten minutes.”</p><b>Aisha K.</b><small>Macan Electric · Geneva</small></article>
+        <article><div class="stars">★★★★★</div><p>“They walked me through every feature. Customer for life.”</p><b>Marco L.</b><small>Panamera GTS · Milan</small></article>
+        <article class="highlight"><div class="stars">★★★★★</div><p>“White-glove delivery is exactly that. Handled all the paperwork.”</p><b>James P.</b><small>911 Carrera · Vienna</small></article>
+        <article><div class="stars">★★★★★</div><p>“No pressure at the showroom — just great people who love cars.”</p><b>Nina H.</b><small>718 Cayman · Salzburg</small></article>
+        <article><div class="stars">★★★★★</div><p>“On my driveway in four days, spotless and charged. Unreal service.”</p><b>Daniel R.</b><small>Cayenne Coupe · Zürich</small></article>
+        <article><div class="stars">★★★★★</div><p>“The most transparent purchase I've ever made. No surprises at all.”</p><b>Sofia M.</b><small>Taycan Turbo GT · Munich</small></article>
+      </div> 
+    </section>
+
+
+    <!-- ================= SHOWROOM ================= -->
+    <section class="showrooms section" id="explore">
+      <div class="section-label"><span></span> SHOWROOMS</div>
+      <h2>Find your nearest showroom</h2>
+
+      <div class="map">
+        <div class="map-card">
+          <small>Flagship</small>
+          <h3>Munich</h3>
+          
+          <p>Maximilianstraße 12 · 80539<br>Mon-Sat 9:00-19:00 · Sun closed</p>
+          <a 
+  href="https://www.google.com/maps/search/?api=1&query=Maximilianstrasse+12,+80539+Munich,+Germany"
+  target="_blank"
+  class="orange-btn">
+  Get directions
+</a>
+        </div>
+        <div class="map-placeholder">MAP</div>
+        <img src="https://www.worldmap1.com/map/world/english_world_political_map.gif" alt="Munich Showroom Map">
+      </div>
+
+      <div class="locations">
+        <a class="selected" href="#">Munich<small>9-19</small></a>
+        <a href="#">Zürich<small>9-19</small></a>
+        <a href="#">Vienna<small>9-18:30</small></a>
+        <a href="#">Milan<small>9:30-19</small></a>
+        <a href="#">Geneva<small>9-19</small></a>
+        <a href="#">Salzburg<small>9-18</small></a>
+        <a href="#">Frankfurt<small>9-19</small></a>
+      </div>
+    </section>
+
+
+    <!-- ================= TEST DRIVE ================= -->
+    <section class="test-drive section-box">
+      <div class="drive-content">
+        <div class="section-label"><span></span> SLOTS AVAILABLE TODAY</div>
+        <h2>Drive it before you decide</h2>
+        <p>Pick a showroom — we'll hold the car and confirm your slot in minutes.</p>
+
+        <div class="city-buttons">
+          <button>Munich</button><button>Zürich</button><button>Vienna</button><button>Milan</button>
+        </div>
+
+        <div class="drive-action">
+          <a class="orange-btn" href="#">Book — next slot 4:30pm→</a>
+          <span>◉ ◉ ◉1,200+ booked this month</span>
+        </div>
+      </div>
+
+      <img src="https://demo.gridgum.com/avavamotors/car-dealer/assets/img/cabriolet-hero.webp" alt="Test drive car">
+    </section>
+
+
+    <!-- ================= DEALERS ================= -->
+    <section class="dealers section-box">
+      <div class="section-label"><span></span> OUR DEALERS</div>
+      <h2>The dealers we vet, and keep vetting</h2>
+      <div class="dealer-list">
+        <span>●　Sterling Automobile</span>
+        <span>●　Nord Prestige</span>
+        <span>●　Alpine Motors</span>
+        <span>●　Baumann Sportwagen</span>
+        <span>●　Rheinland Motors</span>
+        <span>●　Volt Trading</span>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div>
+        <div class="section-label"><span></span> GET IN TOUCH</div>
+        <h2>Let’s find the one you’ll keep forever.</h2>
+      </div>
+      <a class="orange-btn talk" href="#">Talk to us</a>
+    </div>
+
+    <div class="footer-grid">
+      <div>
+        <div class="logo">AVAVA <span>Motors</span></div>
+        <p>Europe's multi-brand home for exceptional<br>cars since 2011.</p>
+      </div>
+
+      <div><h4>Inventory</h4><a href="#">All vehicles</a><a href="#">New arrivals</a><a href="#">Electric</a></div>
+      <div><h4>Company</h4><a href="#">About</a><a href="#">Showrooms</a><a href="#">Careers</a></div>
+      <div><h4>Services</h4><a href="#">Financing</a><a href="#">Trade-in</a><a href="#">Servicing</a></div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 AVAVA Motors　 Privacy　 Terms</span>
+      <span>○　◎　●</span>
+    </div>
+
+    <!-- Large AVAVA watermark exactly like the reference -->
+    <div class="footer-watermark hover-text" aria-hidden="true">AVAVA</div>
+    
+
+    <!-- Moving bottom city line -->
+    <div class="avava-marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <span>MUNICH</span><b>•</b>
+          <span>ZÜRICH</span><b>•</b>
+          <span>VIENNA</span><b>•</b>
+          <span>MILAN</span><b>•</b>
+          <span>GENEVA</span><b>•</b>
+          <span>SALZBURG</span><b>•</b>
+          <span>FRANKFURT</span><b>•</b>
+          <span>MUNICH</span><b>•</b>
+          <span>ZÜRICH</span><b>•</b>
+          <span>VIENNA</span><b>•</b>
+          <span>MILAN</span><b>•</b>
+        </div>
+        <div class="marquee-group">
+          <span>MUNICH</span><b>•</b>
+          <span>ZÜRICH</span><b>•</b>
+          <span>VIENNA</span><b>•</b>
+          <span>MILAN</span><b>•</b>
+          <span>GENEVA</span><b>•</b>
+          <span>SALZBURG</span><b>•</b>
+          <span>FRANKFURT</span><b>•</b>
+          <span>MUNICH</span><b>•</b>
+          <span>ZÜRICH</span><b>•</b>
+          <span>VIENNA</span><b>•</b>
+          <span>MILAN</span><b>•</b>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
